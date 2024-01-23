@@ -16,7 +16,7 @@ import org.junit.Test;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.util.FileCopyUtils;
 
-public class BOJ_Stack_10828 {
+public class BOJ_10828_Stack {
 
 	@Test
 	public void test() throws IOException {
