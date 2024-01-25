@@ -25,10 +25,6 @@ public class BOJ_10828_Stack {
 
 		///
 		ClassPathResource resource = new ClassPathResource("text01.txt");
-//		byte[] bdata = FileCopyUtils.copyToByteArray(resource.getInputStream());
-//		String jsonTxt = new String(bdata, StandardCharsets.UTF_8);
-//		System.out.println(jsonTxt);
-		System.out.println(resource.getURI().getPath());
 
 		System.setIn(new FileInputStream(resource.getURI().getPath()));
 		///
