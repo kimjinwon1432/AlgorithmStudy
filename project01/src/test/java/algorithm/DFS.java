@@ -48,19 +48,23 @@ public class DFS {
 	int maxEdge;
 	int start;
 	int end;
-	
+	/*
+	 *      v: 현재 방문하고 있는 정점. 
+	 *  depth: 현재까지의 깊이
+	 */
 	public void depthFirstSearch(int v, int depth) {
-		if(v== end) {
-			if(maxEdge < 0 || depth <maxEdge ) {
+		if(v== end) { //목적지인지 확인
+			if(maxEdge < 0 || depth <maxEdge ) { //목적지 도달 시 maxEdge와 비교해 최단거리 갱신
 				maxEdge = depth;
 			}
 			return;
 		}
+		// 그래프의 정점 방문 표시
 		visit[v] = true;
 		for(int i =1; i<= vertex; i++) {
-			if(map[v][i] ==1 ) {
+			if(map[v][i] ==1 ) { // 정점 v에서 i로의 간선이 있는지 확인
 				depthFirstSearch(i, depth+1);
-				visit[i]=false;
+				visit[i]=false;// 재귀호출 마친 뒤 다시 방문 가능하도록 변경
 			}
 		}
 	}
@@ -69,7 +73,6 @@ public class DFS {
 	
 	@Test
 	public void test() {
-//		fail("Not yet implemented");
 		Scanner sc = new Scanner(System.in);
 		int T = sc.nextInt();
 		for (int test_case=1;  test_case<=T; test_case++) { 
@@ -78,10 +81,9 @@ public class DFS {
 			start = sc.nextInt();
 			end = sc.nextInt();
 			for(int i = 0; i< edge; i++) {
-				// 각 노드의 자식 노드
 				int v1 = sc.nextInt();
 				int v2 = sc.nextInt();
-				map[v1][v2]= 1; // 해당 노드를 방문함.
+				map[v1][v2]= 1; 
 			}
 			maxEdge = -1;
 			depthFirstSearch(start,0); // 시작 위치는 깊이가 0임.

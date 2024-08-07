@@ -1,4 +1,4 @@
-package project01;
+package BOJ.AL100;
 
 import java.io.BufferedReader;
 import java.io.IOException;

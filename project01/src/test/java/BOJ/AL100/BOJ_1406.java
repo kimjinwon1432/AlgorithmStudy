@@ -1,4 +1,4 @@
-package project01;
+package BOJ.AL100;
 
 import org.junit.Test;
 import org.springframework.core.io.ClassPathResource;
@@ -13,9 +13,9 @@ public class BOJ_1406 {
 	public void test() throws Exception{
 		//resource 디렉터리 내의 파일 읽는 방법 -> ClassPathResource 를 이용한다.
 		Resource resource = new ClassPathResource
-//										("BOJ_1406_1.txt");
-										("BOJ_1406_2.txt");
-//										("BOJ_1406_3.txt");
+//										("BOJ/BOJ_1406_1.txt");
+										("BOJ/BOJ_1406_2.txt");
+//										("BOJ/BOJ_1406_3.txt");
 		
 		
 		BufferedReader br = new BufferedReader( new InputStreamReader(resource.getInputStream()));

@@ -1,4 +1,4 @@
-package project01;
+package BOJ.AL100;
 
 import static org.junit.Assert.*;
 
@@ -20,7 +20,7 @@ public class BOJ_10845_queueTest_2 {
 	@Test
 	public void test() throws FileNotFoundException, IOException {
 //		fail("Not yet implemented");
-		ClassPathResource resource = new ClassPathResource("BOJ_10845_2.txt");
+		ClassPathResource resource = new ClassPathResource("BOJ/BOJ_10845_2.txt");
 
 		System.setIn(new FileInputStream(resource.getURI().getPath()));
 		///

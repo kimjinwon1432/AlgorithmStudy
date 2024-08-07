@@ -1,4 +1,4 @@
-package project01;
+package BOJ.AL100;
 
 import static org.junit.Assert.*;
 
@@ -19,7 +19,7 @@ public class BOJ_10845_queue {
 	
 	@Test
 	public void test() throws IOException{
-		ClassPathResource resource = new ClassPathResource("BOJ_10845_1.txt");
+		ClassPathResource resource = new ClassPathResource("BOJ/BOJ_10845_1.txt");
 
 		System.setIn(new FileInputStream(resource.getURI().getPath()));
 		///
